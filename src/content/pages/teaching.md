@@ -33,6 +33,7 @@ exercises. As students gain confidence I reduce the scaffolding.
 
 ## Teaching experience
 
+- Invited lecture, October 2026: Watching Forests from Above: Remote Sensing for Forest Resource Monitoring
 - Guest lectures at UNC-Chapel Hill: Google Earth Engine (2025), leaf area index from optical remote sensing (2023), remote sensing of water surface elevation (2022)
 - Guest lecture at Southern Methodist University: remote sensing for flooding and wetland analysis (2024)
 - Teaching assistant at the University of Puerto Rico: Advanced Spatial Analysis (2019), Environmental Modeling and Geospatial Analysis (2018)
