@@ -2,10 +2,11 @@
 import { getCollection, getEntry, render } from 'astro:content';
 import PublicationList from '../components/PublicationList.astro';
 import TerrainFigure from '../components/TerrainFigure.astro';
-import { CONTACT, CV_PDF, PROFILES, SITE } from '../consts';
+import { CONTACT, CV_PDF, PORTRAIT, PROFILES, SITE } from '../consts';
+import cv from '../data/cv.json';
 import Base from '../layouts/Base.astro';
 import { publications } from '../lib/bibtex';
-import { cvPdfExists } from '../lib/cv';
+import { cvPdfExists, portraitExists } from '../lib/cv';
 import { url } from '../utils/paths';
 
 const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
@@ -14,6 +15,8 @@ const [biomass, water] = projects;
 const future = await getEntry('pages', 'future');
 const { Content: Future } = await render(future!);
 const featured = publications.filter((p) => p.home);
+const about = await getEntry('pages', 'about');
+const { Content: About } = await render(about!);
 ---
 
 <Base>
@@ -46,6 +49,29 @@ const featured = publications.filter((p) => p.home);
 				</ul>
 			</div>
 			<TerrainFigure biomassHref={projectHref(biomass.id)} waterHref={projectHref(water.id)} />
+		</section>
+
+		<section class="section" aria-labelledby="about">
+			<div class="section__head">
+				<h2 id="about">About</h2>
+				<a class="section__more" href={url('/cv/')}>Curriculum vitae</a>
+			</div>
+			<div class="about">
+				<div class="prose">
+					<About />
+				</div>
+				<aside class="about__side" aria-label="Interests and education">
+					{portraitExists && <img class="about__portrait" src={url(PORTRAIT)} alt={`Portrait of ${SITE.name}`} width="320" height="320" loading="lazy" />}
+					<h3>Interests</h3>
+					<ul>
+						{(about!.data.interests ?? []).map((item) => <li>{item}</li>)}
+					</ul>
+					<h3>Education</h3>
+					<ul class="about__education">
+						{cv.education.map((item) => <li><strong>{item.title.split(',')[0]}</strong>, {item.org}, {item.years.split('–')[1]}</li>)}
+					</ul>
+				</aside>
+			</div>
 		</section>
 
 		<section class="section" aria-labelledby="projects">

@@ -25,9 +25,11 @@ npm run preview    # serve the production build
 |---|---|
 | Name, role, opening sentence, navigation, email, profile links | `src/consts.ts` |
 | The two project pages | `src/content/projects/*.md` (front matter holds contribution, baseline, test, uncertainties, links) |
+| Biography and interests (homepage "About") | `src/content/pages/about.md` |
 | Teaching and mentoring page | `src/content/pages/teaching.md` |
 | Future research (homepage and Research page) | `src/content/pages/future.md` |
-| Publications | `src/data/publications.bib` (add `selected = {home}` to show an entry on the homepage) |
+| Publications | `src/data/publications.bib` (`selected = {home}` shows an entry on the homepage; `project = {<project file name>}` lists it on that project page) |
+| Talks page: conference presentations | `src/data/talks.json` (invited talks come from `cv.json`) |
 | CV page: appointments, education, funding, datasets, talks, service | `src/data/cv.json` |
 | "Published work" blocks on the Research page | `src/data/research-lines.json` |
 | Colors, fonts, layout | `src/styles/global.css` |
@@ -44,6 +46,8 @@ figure:
 
 To add the downloadable CV, save the PDF as `public/files/Chao-Wang-CV.pdf`. The "CV (PDF)" button on the
 homepage and the download button on the CV page appear automatically once the file exists.
+
+To add a portrait, save a square photo as `public/images/portrait.jpg`. It appears in the About section.
 
 ## The homepage figure
 
@@ -105,11 +109,10 @@ Nothing on the site links to these yet, so there are no broken links.
 - **CV as PDF**, saved to `public/files/Chao-Wang-CV.pdf`.
 - **One figure for each project page.** Figures from the 2026 *Landscape Ecology* paper are published
   under CC BY-NC-ND, so they can be reused unmodified with attribution.
-- **A portrait photo**, if you want one beside your name.
+- **A portrait photo**, saved to `public/images/portrait.jpg`.
 - **Results for the two current projects** when they can be made public. Both pages are marked "In
   progress" and state no results.
-- **A complete BibTeX file**, if you want every paper listed. The site shows 12 selected entries and links
-  to Google Scholar for the rest.
+- **Press coverage and extra profile links** (ORCID, LinkedIn), if you want them listed.
 
 ## License
 

@@ -31,7 +31,7 @@ const projects = defineCollection({
 /** Free-standing pages written in Markdown (teaching, future research). */
 const pages = defineCollection({
 	loader: glob({ base: './src/content/pages', pattern: '**/*.md' }),
-	schema: z.object({ title: z.string(), description: z.string() }),
+	schema: z.object({ title: z.string(), description: z.string(), interests: z.array(z.string()).optional() }),
 });
 
 export const collections = { projects, pages };

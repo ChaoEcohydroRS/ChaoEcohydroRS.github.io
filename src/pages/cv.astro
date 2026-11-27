@@ -2,7 +2,9 @@
 import { CONTACT, CV_PDF, PROFILES, SITE } from '../consts';
 import cv from '../data/cv.json';
 import Base from '../layouts/Base.astro';
+import { publications } from '../lib/bibtex';
 import { cvPdfExists } from '../lib/cv';
+import talks from '../data/talks.json';
 import { url } from '../utils/paths';
 ---
 
@@ -83,12 +85,11 @@ import { url } from '../utils/paths';
 		<section class="section" aria-labelledby="publications">
 			<div class="section__head">
 				<h2 id="publications">Publications</h2>
-				<a class="section__more" href={url('/publications/')}>Selected publications</a>
+				<a class="section__more" href={url('/publications/')}>All publications</a>
 			</div>
 			<p class="prose">
-				More than 30 peer-reviewed articles. Selected papers are on the
-				<a href={url('/publications/')}>Publications</a> page, and the full list is on
-				<a href={PROFILES[0].href}>{PROFILES[0].label}</a>.
+				{publications.length} papers, listed in full on the <a href={url('/publications/')}>Publications</a> page.
+				Citation counts are on <a href={PROFILES[0].href}>{PROFILES[0].label}</a>.
 			</p>
 		</section>
 
@@ -110,7 +111,10 @@ import { url } from '../utils/paths';
 		</section>
 
 		<section class="section" aria-labelledby="talks">
-			<div class="section__head"><h2 id="talks">Invited talks</h2></div>
+			<div class="section__head">
+				<h2 id="talks">Invited talks</h2>
+				<a class="section__more" href={url('/talks/')}>All {talks.length + cv.talks.length} talks and presentations</a>
+			</div>
 			<ul class="cv-list">
 				{
 					cv.talks.map((item) => (

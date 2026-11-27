@@ -13,6 +13,7 @@ export const SITE = {
 export const NAV = [
 	{ label: 'Research', href: '/research/' },
 	{ label: 'Publications', href: '/publications/' },
+	{ label: 'Talks', href: '/talks/' },
 	{ label: 'Teaching', href: '/teaching/' },
 	{ label: 'CV', href: '/cv/' },
 	{ label: 'Contact', href: '/#contact' },
@@ -34,6 +35,12 @@ export const PROFILES = [
  */
 export const CV_PDF = '/files/Chao-Wang-CV.pdf';
 
-/** How the site owner's name appears in BibTeX author lists (used to set it in bold). */
+/**
+ * A portrait photo. Save it as public/images/portrait.jpg and it appears in the About
+ * section of the homepage; until then the section is shown without a photo.
+ */
+export const PORTRAIT = '/images/portrait.jpg';
+
+/** The site owner's name as it appears in author lists (used to set it in bold). */
 export const OWNER_SURNAME = 'Wang';
-export const OWNER_GIVEN_INITIAL = 'C';
+export const OWNER_GIVEN = 'Chao';

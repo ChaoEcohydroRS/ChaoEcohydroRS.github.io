@@ -1,0 +1,248 @@
+[
+  {
+    "year": 2025,
+    "text": "Wang, C., Song, C., Schroeder, T. A., et al. (September). AI-Powered Multisensor Fusion for Forest Biomass Mapping in Southeastern North Carolina. Auburn University's International Conference on Forest Carbon and Resilience, Auburn, AL.",
+    "oral": true,
+    "first": true
+  },
+  {
+    "year": 2025,
+    "text": "Wang, C., Eidam, E., Bisson, K., Glover, H., & Scheick, J. (December). ICESat-2 Diffuse Attenuation Coefficients (Kd) in Coastal Waters: Comparison with In-Situ and Conventional Ocean-Color Satellites. AGU25.",
+    "oral": false,
+    "first": true
+  },
+  {
+    "year": 2025,
+    "text": "Wang, C., Song, C., Schroeder, T., Pavelsky, T., Yan, Z., Zhang, Y., Yao, F., & Fu, Y. (December). AI-Driven Fusion of NAIP Photogrammetry and Multi-Sensor Data for High-Resolution Forest Biomass Mapping. AGU25.",
+    "oral": false,
+    "first": true
+  },
+  {
+    "year": 2025,
+    "text": "Hamidi, E. E., Anarde, K., Wang, C., Smith, A., McCune, R., & Pavelsky, T. (December). High Tide Flood Detection Using Multi-Satellite Remote Sensing Data and In Situ Flood Sensors. AGU25.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2025,
+    "text": "Smith, A., Pavelsky, T., & Wang, C. (December). Remote Sensing of Flood Dynamics in Salt Marshes in Sea Level and Davis, NC. AGU25.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2025,
+    "text": "Arauz, I., Pavelsky, T., Wang, C., & Sebastian, A. (December). Mapping Inundation Frequency using Sentinel-1 as a Potential Driver of Coastal Freshwater Forest Mortality. AGU25.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2025,
+    "text": "Pu, T., Villarini, G., Wang, C., & Arauz, I. (December). Meter-Scale Hail Detection from Space. AGU25.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2025,
+    "text": "Yan, Z., Song, C., Ran, L., Wang, C., Jeong, J., & Doro, L. (December). Enhancing the APEX Model for Perennial Vegetation Ecosystem Carbon Fluxes and Storage. AGU25.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2025,
+    "text": "Wang, C., Song, C., Schroeder, T. A., et al. (April). High-Resolution Forest Canopy Height Mapping via U-Net Fusion of NAIP Photogrammetry and Fully-Polarimetric L-Band UAVSAR Data. International Association for Landscape Ecology-North America (IALE-NA) Annual Meeting, Raleigh, NC.",
+    "oral": true,
+    "first": true
+  },
+  {
+    "year": 2025,
+    "text": "Song, C., Wang, C., Schroeder, T. A., et al. (April). Enhancing Biomass Estimation using Machine Learning with Multisource Remote Sensing, NAIP Photogrammetry, and FIA Data. IALE-NA Annual Meeting, Raleigh, NC.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2024,
+    "text": "Wang, C., Song, C., Schroeder, T., Woodcock, C. E., Pavelsky, T., Han, Q., & Yao, F. (December). Leveraging GEDI and Multisource Remote Sensing for Enhanced Forest Canopy Height Estimation in Southeast North Carolina. In AGU Fall Meeting, Washington, D.C.",
+    "oral": false,
+    "first": true
+  },
+  {
+    "year": 2024,
+    "text": "Wang, C., Pavelsky, T., Anarde, K., Hino, M., & Sebastian, A. (December). Can Capella's Commercial SAR Effectively Capture High-Tide Flooding? In AGU Fall Meeting, Washington, D.C.",
+    "oral": false,
+    "first": true
+  },
+  {
+    "year": 2024,
+    "text": "Arauz, I., Pavelsky, T., & Wang, C. (December). Strategic Location of Flow-Control Obstructions for Saltwater Intrusion Resilience in Coastal Freshwater Forests on the North American Coastal Plain. In AGU Fall Meeting, Washington, D.C.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2024,
+    "text": "Yao, F., Band, L. E., Cheng, F. Y., Rosentreter, J., Yang, K., & Wang, C. (December). A new high-resolution global lake area dataset for constraining biogeochemical fluxes from inland water bodies. In AGU Fall Meeting, Washington, D.C.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2023,
+    "text": "Yeung, C. H., Pavelsky, T., Wang, C., Emanuel, R., Bernhardt, E. S., & Yang, X. (December). Coastal Forest Mortality Hotspots in the US Atlantic Coast. AGU Fall Meeting, San Francisco, CA.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2022,
+    "text": "Wang, C., Pavelsky, T., Tulbure, M. G., Sebastian, A., Yao, F., Yang, X.,... & Frankenberg, E. (June). Rapid water level changes during Hurricane Florence estimated from L-band repeat-pass UAVSAR InSAR data. In Frontiers in Hydrology Meeting. AGU.",
+    "oral": true,
+    "first": true
+  },
+  {
+    "year": 2022,
+    "text": "Wang, C., Pavelsky, T., Kyzivat, E. D., Dolan, W., Davis, J., Garcia Tigreros, F.,... & Peters, D. L. (December) Tracking dynamic wetland vegetation communities after a flood event with airborne AVIRIS-NG, UAVSAR, UAV LiDAR, and PlanetScope data in Peace-Athabasca Delta. In AGU Fall Meeting, Chicago, IL.",
+    "oral": true,
+    "first": true
+  },
+  {
+    "year": 2022,
+    "text": "Wang, C., T. M. Pavelsky, E. D. Kyzivat, et al (May). Characterization of wetland vegetation communities from airborne AVIRIS-NG, UAVSAR, and LiDAR data across the Peace-Athabasca Delta, Canada. ABoVE Science Team Virtual Meeting 8.",
+    "oral": true,
+    "first": true
+  },
+  {
+    "year": 2021,
+    "text": "Wang, C., T. M. Pavelsky, E. D. Kyzivat, et al (December). Arctic Boreal wetland vegetation communities mapping in the Peace Athabasca Delta using AVIRIS-NG hyperspectral data. AGU Fall Meeting, New Orleans, LA.",
+    "oral": true,
+    "first": true
+  },
+  {
+    "year": 2021,
+    "text": "Wang, C., T. M. Pavelsky, E. D. Kyzivat, et al (May). Mapping vegetation communities in the Arctic-boreal wetlands of the Peace-Athabasca Delta using AVIRIS-NG hyperspectral data. ABoVE Science Team Virtual Meeting 7.",
+    "oral": true,
+    "first": true
+  },
+  {
+    "year": 2021,
+    "text": "Wang, C., T. M. Pavelsky, E. D. Kyzivat, et al (March). Arctic-boreal wetland vegetation community mapping by AVIRIS-NG hyperspectral data for upscaling of methane emission flux, a case in Peace-Athabasca Delta. 7th North American Carbon Program Open Science Meeting.",
+    "oral": true,
+    "first": true
+  },
+  {
+    "year": 2020,
+    "text": "Wang, C., T. M. Pavelsky, Yao, F., et al (December). Repeat-pass L-band UAVSAR images for flood extents mapping during Hurricane Florence. AGU Fall Virtual Meeting.",
+    "oral": true,
+    "first": true
+  },
+  {
+    "year": 2020,
+    "text": "E. D. Kyzivat, L. C. Smith, T. M. Pavelsky, …, Wang, C., et al (December). Sensitivity of lake and wetland methane emissions upscaling to littoral zone area using airborne synthetic aperture radar. AGU Fall Virtual Meeting.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2020,
+    "text": "Wang, C., T. M. Pavelsky, Ethan Kyzivat. (June). Characterizing vegetation communities around Chillowes Lake in the Athabasca Peace Delta using AVIRIS-NG hyperspectral data. ABoVE Science Team Virtual Meeting 6.",
+    "oral": true,
+    "first": true
+  },
+  {
+    "year": 2020,
+    "text": "D. Butman, T. M. Pavelsky, …, Wang, C., et al. (June). Integrating ABoVE airborne datasets and field campaigns to identify hotspots of surface water inundation and carbon flux across Arctic-Boreal ecosystems (2019-2022). ABoVE Science Team Virtual Meeting 6.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2020,
+    "text": "E. D. Kyzivat, L. C. Smith, …, Wang, C., et al. (June). Arctic-Boreal Wetland Mapping by Airborne SAR to Upscale Greenhouse Gas Emissions. ABoVE Science Team Virtual Meeting 6.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2019,
+    "text": "M. Yu, Wang, C., and Q. Gao. (December). Differentiated trends in land cover changes in Qinghai-Tibet Plateau during 2001-2015 in response to climate and human activities. AGU Fall Meeting, San Francisco, CA.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2019,
+    "text": "Wang, C., M. Yu, Q. Gao, Yao, F. (December). The impacts of solar photovoltaic farms on land surface temperature in the continental United States, AGU Fall Meeting, San Francisco, CA.",
+    "oral": false,
+    "first": true
+  },
+  {
+    "year": 2019,
+    "text": "M. Cartagena, Q. Gao and Wang, C. (2019, March). Land changes in Jobos Bay, Puerto Rico during 1991-2000: urban expansion and agriculture conversion. The 35th Annual Louisiana Remote Sensing & GIS Workshop. Lafayette, Louisiana.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2018,
+    "text": "Wang, C., M. Yu, Q. Gao, Yao, F. (2018, December). The expansion of solar photovoltaic farms could have unexpected consequences on farmlands, pastures, and woodlands in the United States. AGU Fall Meeting. Washington, D.C.",
+    "oral": false,
+    "first": true
+  },
+  {
+    "year": 2018,
+    "text": "Yao F., Wang J., Wang, C., J.-F. Cretaux (2018, December). Constructing high-frequency time series of global lake and reservoir storage changes using Landsat imagery and radar altimetry. AGU Fall Meeting. Washington, D.C.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2018,
+    "text": "Yao, F., Wang, J., Yang, K., Wang, C., et al (2018, September). Lake Storage Variation on the Endorheic Tibetan Plateau and its Attribution to Climate Change since the New Millennium. Ocean Surface Topography Science Team (OSTST) meeting. Ponta Delgada, São Miguel Island Azores Archipelago, Portugal.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2018,
+    "text": "Yao, F., Wang, J., Yang, K., Wang, C., et al (2018, October). Recent volumetric variability in alpine lakes on the endorheic Tibet and its link to climate change. 2018 Regional AAG. Manhattan, KS.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2017,
+    "text": "Yang, K., Yao, F., Dong, D., Wang, C., et al (2017). The mechanisms of the alpine lake outburst flood and its impacts on downstream areas - a case study on Zhuonai lake, Tibetan Plateau. 2017 AAG Annual Meeting. Boston, MA.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2017,
+    "text": "Yao, F., Wang, J., Yang, K., Wang, C., et al (2017). Recent volumetric variability in alpine lakes on the endorheic Tibet and its link to climate change 2017 AGU Fall Meeting. New Orleans, LA.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2016,
+    "text": "Wang, C., X. Wang, Q. Gao, and M. Yu. Fusion of optical and SAR remote sensing images for tropical forests monitoring. 2016 AGU Fall Meeting. San Francisco, CA.",
+    "oral": true,
+    "first": true
+  },
+  {
+    "year": 2016,
+    "text": "Yang, K., Yao, F., J. Luo, …, Wang, C. (2016) Combined Landsat Satellite and HJ Satellite for Monitoring Large Alpine Lakes on the Changtang Plateau over 2009-2014. 2016 AGU Fall Meeting. San Francisco, CA.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2016,
+    "text": "M. Yu, C. Gao, and Wang, C. Extent of Night Warming Differentiates the Temporal Trend of Tropical Greenness over 2001-2015. 2016 AGU Fall Meeting. San Francisco, CA.",
+    "oral": false,
+    "first": false
+  },
+  {
+    "year": 2014,
+    "text": "Wang, C., M. Yu, Q. Gao. The shift of forest area in the agro pastoral ecotone of northern China. Conference in San Juan, Puerto Rico.",
+    "oral": false,
+    "first": true
+  },
+  {
+    "year": 2012,
+    "text": "Wang, C., Ma, J. Retrieval of cloud cover and cloud phase based on satellite imagery. Conference in Beijing, China.",
+    "oral": false,
+    "first": true
+  },
+  {
+    "year": 2011,
+    "text": "Yao, F., Wang, C., Wu, C., Wang, X., and J. Ma. The enterprise solutions of police geography information system based on the framework of ArcGIS platform, The 9th Esri China Users Conference Proceedings, Beijing, China.",
+    "oral": false,
+    "first": false
+  }
+]

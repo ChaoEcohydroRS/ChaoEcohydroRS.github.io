@@ -1,10 +1,15 @@
-% Selected publications shown on the site, newest first within a year.
-% Add an entry here and it appears on /publications/ (and on the homepage if `selected = {home}`).
-% Fields used: author, title, journal, year, volume, number, pages, doi, note, selected.
-% The full list is on Google Scholar (linked from the Publications page).
+% Publications shown on the site, newest first.
+%
+% Fields the site reads: author, title, journal, year, volume, number, pages, doi, note, plus
+%   selected    = {home}                 show the entry on the homepage
+%   project     = {<project file name>}  list it under "Related publications" on that project page
+%   ownerlisted = {true}                 the site owner is among the authors hidden behind "and others"
+%
+% Records were taken from CrossRef by DOI and checked against the CV.
+
 
 @article{wang2026biomass,
-  author   = {Wang, C. and Song, C. and Schroeder, T. A. and Pavelsky, T. M. and Yan, Z. and Zhang, Y. and Yao, F. and Fu, Y.},
+  author   = {Wang, Chao and Song, Conghe and Schroeder, Todd A. and Pavelsky, Tamlin M. and Yan, Zhengxiao and Zhang, Yulong and Yao, Fangfang and Fu, Yuwei},
   title    = {AI-powered multisensor fusion for forest biomass mapping: photogrammetric canopy profiles improve estimates in Southeastern North Carolina},
   journal  = {Landscape Ecology},
   year     = {2026},
@@ -12,11 +17,12 @@
   number   = {8},
   pages    = {139},
   doi      = {10.1007/s10980-026-02377-0},
+  project  = {forest-biomass-change},
   selected = {home}
 }
 
 @article{liu2026landcover,
-  author   = {Liu, J. and Tang, X. and Wang, C. and Yan, Z. and Dai, Y. and Zhang, Q. and Song, C.},
+  author   = {Liu, Jie and Tang, Xusheng and Wang, Chao and Yan, Zhengxiao and Dai, Yuchen and Zhang, Qi and Song, Conghe},
   title    = {Using GeoAI and machine learning tools for consistent high-resolution land cover mapping based on time-series NAIP imagery},
   journal  = {Landscape Ecology},
   year     = {2026},
@@ -27,7 +33,7 @@
 }
 
 @article{yeung2026rising,
-  author   = {Yeung, H. C. H. and Pavelsky, T. M. and Wang, C. and McDowell, N. G. and Emanuel, R. E. and Liu, E. S. and Bernhardt, E. S. and Yang, X.},
+  author   = {Yeung, Henry Chi Hang and Pavelsky, Tamlin M. and Wang, Chao and McDowell, Nate G. and Emanuel, Ryan E. and Liu, Elsie Shenyi and Bernhardt, Emily S. and Yang, Xi},
   title    = {Rising water is an underappreciated driver of forest mortality},
   journal  = {bioRxiv},
   year     = {2026},
@@ -36,7 +42,7 @@
 }
 
 @article{yeung2025ghost,
-  author   = {Yeung, H. C. H. and Pavelsky, T. M. and Wang, C. and McDowell, N. G. and Emanuel, R. E. and Bernhardt, E. S. and Yang, X.},
+  author   = {Yeung, Henry Chi Hang and Pavelsky, Tamlin M. and Wang, Chao and McDowell, Nate G. and Emanuel, Ryan E. and Bernhardt, Emily S. and Yang, Xi},
   title    = {Overlooked and extensive ghost forest formation across the US Atlantic coast},
   journal  = {Nature Sustainability},
   year     = {2025},
@@ -48,19 +54,44 @@
 }
 
 @article{wang2025canopy,
-  author   = {Wang, C. and Song, C. and Schroeder, T. A. and Woodcock, C. E. and Pavelsky, T. M. and Han, Q. and Yao, F.},
-  title    = {Interpretable multi-sensor fusion of optical and SAR data for GEDI-based canopy height mapping in Southeastern North Carolina},
+  author   = {Wang, Chao and Song, Conghe and Schroeder, Todd A. and Woodcock, Curtis E. and Pavelsky, Tamlin M. and Han, Qianqian and Yao, Fangfang},
+  title    = {Interpretable Multi-Sensor Fusion of Optical and SAR Data for GEDI-Based Canopy Height Mapping in Southeastern North Carolina},
   journal  = {Remote Sensing},
   year     = {2025},
   volume   = {17},
   number   = {9},
   pages    = {1536},
   doi      = {10.3390/rs17091536},
+  project  = {forest-biomass-change},
   selected = {home}
 }
 
+@article{yang2024soil,
+  author   = {Yang, Yali and Liu, Xianbin and Li, Tao and Gao, Jinbo and Liu, Yuntong and Wang, Chao},
+  title    = {Disentangling the Complex Effects of Seasonal Drought, Floor Mass, and Roots on Soil Microbial Biomass in a Subtropical Moist Forest},
+  journal  = {Forests},
+  year     = {2024},
+  volume   = {15},
+  number   = {11},
+  pages    = {1948},
+  doi      = {10.3390/f15111948}
+}
+
+@article{jaramillo2024hydrogeodesy,
+  author   = {Jaramillo, Fernando and Aminjafari, Saeid and Castellazzi, Pascal and Fleischmann, Ayan and Fluet-Chouinard, Etienne and Hashemi, Hossein and Hubinger, Clara and Martens, Hilary R. and Papa, Fabrice and Schöne, Tilo and others},
+  title    = {The Potential of Hydrogeodesy to Address Water-Related and Sustainability Challenges},
+  journal  = {Water Resources Research},
+  year     = {2024},
+  volume   = {60},
+  number   = {11},
+  pages    = {e2023WR037020},
+  doi      = {10.1029/2023WR037020},
+  ownerlisted = {true},
+  project  = {pamlico-sound-water-levels}
+}
+
 @article{eidam2024icesat,
-  author   = {Eidam, E. F. and Bisson, K. and Wang, C. and Walker, C. and Gibbons, A.},
+  author   = {Eidam, E.F. and Bisson, K. and Wang, C. and Walker, C. and Gibbons, A.},
   title    = {ICESat-2 and ocean particulates: A roadmap for calculating Kd from space-based lidar photon profiles},
   journal  = {Remote Sensing of Environment},
   year     = {2024},
@@ -69,8 +100,20 @@
   doi      = {10.1016/j.rse.2024.114222}
 }
 
+@article{yao2024levels,
+  author   = {Yao, Fangfang and Livneh, Ben and Rajagopalan, Balaji and Wang, Jida and Yang, Kehan and Crétaux, Jean-François and Wang, Chao and Minear, J. Toby},
+  title    = {Leveraging ICESat, ICESat-2, and Landsat for Global-Scale, Multi-Decadal Reconstruction of Lake Water Levels},
+  journal  = {Water Resources Research},
+  year     = {2024},
+  volume   = {60},
+  number   = {2},
+  pages    = {e2023WR035721},
+  doi      = {10.1029/2023WR035721},
+  project  = {pamlico-sound-water-levels}
+}
+
 @article{wang2023wetland,
-  author   = {Wang, C. and Pavelsky, T. M. and Kyzivat, E. D. and others},
+  author   = {Wang, Chao and Pavelsky, Tamlin M. and Kyzivat, Ethan D. and Garcia-Tigreros, Fenix and Podest, Erika and Yao, Fangfang and Yang, Xiao and Zhang, Shuai and Song, Conghe and Langhorst, Theodore and Dolan, Wayana and Kurek, Martin R. and Harlan, Merritt E. and Smith, Laurence C. and Butman, David E. and Spencer, Robert G.M. and Gleason, Colin J. and Wickland, Kimberly P. and Striegl, Robert G. and Peters, Daniel L.},
   title    = {Quantification of wetland vegetation communities features with airborne AVIRIS-NG, UAVSAR, and UAV LiDAR data in Peace-Athabasca Delta},
   journal  = {Remote Sensing of Environment},
   year     = {2023},
@@ -80,28 +123,156 @@
   selected = {home}
 }
 
+@article{yao2023sedimentation,
+  author   = {Yao, Fangfang and Minear, J. Toby and Rajagopalan, Balaji and Wang, Chao and Yang, Kehan and Livneh, Ben},
+  title    = {Estimating Reservoir Sedimentation Rates and Storage Capacity Losses Using High-Resolution Sentinel-2 Satellite and Water Level Data},
+  journal  = {Geophysical Research Letters},
+  year     = {2023},
+  volume   = {50},
+  number   = {16},
+  pages    = {e2023GL103524},
+  doi      = {10.1029/2023GL103524}
+}
+
+@article{han2023ensemble,
+  author   = {Han, Qianqian and Zeng, Yijian and Zhang, Lijie and Cira, Calimanut-Ionut and Prikaziuk, Egor and Duan, Ting and Wang, Chao and Szabó, Brigitta and Manfreda, Salvatore and Zhuang, Ruodan and Su, Bob},
+  title    = {Ensemble of optimised machine learning algorithms for predicting surface soil moisture content at a global scale},
+  journal  = {Geoscientific Model Development},
+  year     = {2023},
+  volume   = {16},
+  number   = {20},
+  pages    = {5825--5845},
+  doi      = {10.5194/gmd-16-5825-2023}
+}
+
+@article{kurek2023hydrologic,
+  author   = {Kurek, Martin R. and Garcia-Tigreros, Fenix and Wickland, Kimberly P. and Frey, Karen E. and Dornblaser, Mark M. and Striegl, Robert G. and Niles, Sydney F. and McKenna, Amy M. and Aukes, Pieter J. K. and Kyzivat, Ethan D. and Wang, Chao and Pavelsky, Tamlin M. and Smith, Laurence C. and Schiff, Sherry L. and Butman, David and Spencer, Robert G. M.},
+  title    = {Hydrologic and Landscape Controls on Dissolved Organic Matter Composition Across Western North American Arctic Lakes},
+  journal  = {Global Biogeochemical Cycles},
+  year     = {2023},
+  volume   = {37},
+  number   = {1},
+  pages    = {e2022GB007495},
+  doi      = {10.1029/2022GB007495}
+}
+
+@article{kurek2023voltage,
+  author   = {Kurek, Martin R. and Garcia-Tigreros, Fenix and Nichols, Natalie A. and Druschel, Gregory K. and Wickland, Kimberly P. and Dornblaser, Mark M. and Striegl, Robert G. and Niles, Sydney F. and McKenna, Amy M. and Aukes, Pieter J. K. and Kyzivat, Ethan D. and Wang, Chao and Smith, Laurence C. and Schiff, Sherry L. and Butman, David and Spencer, Robert G. M.},
+  title    = {High Voltage: The Molecular Properties of Redox-Active Dissolved Organic Matter in Northern High-Latitude Lakes},
+  journal  = {Environmental Science & Technology},
+  year     = {2023},
+  volume   = {57},
+  number   = {23},
+  pages    = {8617--8627},
+  doi      = {10.1021/acs.est.3c01782}
+}
+
+@article{han2023soilmoisture,
+  author   = {Han, Qianqian and Zeng, Yijian and Zhang, Lijie and Wang, Chao and Prikaziuk, Egor and Niu, Zhenguo and Su, Bob},
+  title    = {Global long term daily 1 km surface soil moisture dataset with physics informed machine learning},
+  journal  = {Scientific Data},
+  year     = {2023},
+  volume   = {10},
+  number   = {1},
+  pages    = {101},
+  doi      = {10.1038/s41597-023-02011-7}
+}
+
+@article{cartagena2022dasymetric,
+  author   = {Cartagena-Colón, Marianne and Mattei, Hernando and Wang, Chao},
+  title    = {Dasymetric Mapping of Population Using Land Cover Data in JBNERR, Puerto Rico during 1990–2010},
+  journal  = {Land},
+  year     = {2022},
+  volume   = {11},
+  number   = {12},
+  pages    = {2301},
+  doi      = {10.3390/land11122301}
+}
+
 @article{wang2022florence,
-  author   = {Wang, C. and Pavelsky, T. M. and Yao, F. and others},
-  title    = {Flood extent mapping during Hurricane Florence with repeat-pass L-band UAVSAR images},
+  author   = {Wang, Chao and Pavelsky, Tamlin M. and Yao, Fangfang and Yang, Xiao and Zhang, Shuai and Chapman, Bruce and Song, Conghe and Sebastian, Antonia and Frizzelle, Brian and Frankenberg, Elizabeth and Clinton, Nicholas},
+  title    = {Flood Extent Mapping During Hurricane Florence With Repeat-Pass L-Band UAVSAR Images},
   journal  = {Water Resources Research},
   year     = {2022},
+  volume   = {58},
+  number   = {3},
+  pages    = {e2021WR030606},
   doi      = {10.1029/2021WR030606},
+  project  = {pamlico-sound-water-levels},
   selected = {home}
 }
 
+@article{kyzivat2022littoral,
+  author   = {Kyzivat, Ethan D. and Smith, Laurence C. and Garcia-Tigreros, Fenix and Huang, Chang and Wang, Chao and Langhorst, Theodore and Fayne, Jessica V. and Harlan, Merritt E. and Ishitsuka, Yuta and Feng, Dongmei and Dolan, Wayana and Pitcher, Lincoln H and Wickland, Kimberly P. and Dornblaser, Mark M. and Striegl, Robert G. and Pavelsky, Tamlin M. and Butman, David E. and Gleason, Colin J.},
+  title    = {The Importance of Lake Emergent Aquatic Vegetation for Estimating Arctic-Boreal Methane Emissions},
+  journal  = {Journal of Geophysical Research: Biogeosciences},
+  year     = {2022},
+  volume   = {127},
+  number   = {6},
+  pages    = {e2021JG006635},
+  doi      = {10.1029/2021jg006635}
+}
+
 @article{ehlers2022biomass,
-  author   = {Ehlers, D. and Wang, C. and Coulston, J. and Zhang, Y. and Pavelsky, T. and Frankenberg, E. and others},
-  title    = {Mapping forest aboveground biomass using multisource remotely sensed data},
+  author   = {Ehlers, Dekker and Wang, Chao and Coulston, John and Zhang, Yulong and Pavelsky, Tamlin and Frankenberg, Elizabeth and Woodcock, Curtis and Song, Conghe},
+  title    = {Mapping Forest Aboveground Biomass Using Multisource Remotely Sensed Data},
   journal  = {Remote Sensing},
   year     = {2022},
   volume   = {14},
   number   = {5},
   pages    = {1115},
-  doi      = {10.3390/rs14051115}
+  doi      = {10.3390/rs14051115},
+  project  = {forest-biomass-change}
+}
+
+@article{abdalla2021altimetry,
+  author   = {Abdalla, Saleh and Abdeh Kolahchi, Abdolnabi and Ablain, Michaël and Adusumilli, Susheel and Aich Bhowmick, Suchandra and Alou-Font, Eva and Amarouche, Laiba and Andersen, Ole Baltazar and Antich, Helena and Aouf, Lotfi and others},
+  title    = {Altimetry for the future: Building on 25 years of progress},
+  journal  = {Advances in Space Research},
+  year     = {2021},
+  volume   = {68},
+  number   = {2},
+  pages    = {319--363},
+  doi      = {10.1016/j.asr.2021.01.022},
+  ownerlisted = {true},
+  project  = {pamlico-sound-water-levels}
+}
+
+@article{liu2021oxygen,
+  author   = {Liu, Xiao-Ming and Kah, Linda C. and Knoll, Andrew H. and Cui, Huan and Wang, Chao and Bekker, Andrey and Hazen, Robert M.},
+  title    = {A persistently low level of atmospheric oxygen in Earth’s middle age},
+  journal  = {Nature Communications},
+  year     = {2021},
+  volume   = {12},
+  number   = {1},
+  pages    = {351},
+  doi      = {10.1038/s41467-020-20484-7}
+}
+
+@article{dong2020spartina,
+  author   = {Dong, Di and Wang, Chao and Yan, Jinhui and He, Qingyou and Zeng, Jisheng and Wei, Zheng},
+  title    = {Combing Sentinel-1 and Sentinel-2 image time series for invasive Spartina alterniflora mapping on Google Earth Engine: a case study in Zhangjiang Estuary},
+  journal  = {Journal of Applied Remote Sensing},
+  year     = {2020},
+  volume   = {14},
+  number   = {04},
+  pages    = {1--18},
+  doi      = {10.1117/1.JRS.14.044504}
+}
+
+@article{wang2019tibet,
+  author   = {Wang, Chao and Gao, Qiong and Yu, Mei},
+  title    = {Quantifying Trends of Land Change in Qinghai-Tibet Plateau during 2001–2015},
+  journal  = {Remote Sensing},
+  year     = {2019},
+  volume   = {11},
+  number   = {20},
+  pages    = {2435},
+  doi      = {10.3390/rs11202435}
 }
 
 @article{yao2019lakes,
-  author   = {Yao, F. and Wang, J. and Wang, C. and Crétaux, J.-F.},
+  author   = {Yao, Fangfang and Wang, Jida and Wang, Chao and Crétaux, Jean-François},
   title    = {Constructing long-term high-frequency time series of global lake and reservoir areas using Landsat imagery},
   journal  = {Remote Sensing of Environment},
   year     = {2019},
@@ -110,9 +281,31 @@
   doi      = {10.1016/j.rse.2019.111210}
 }
 
+@article{yao2018storage,
+  author   = {Yao, Fangfang and Wang, Jida and Yang, Kehan and Wang, Chao and Walter, Blake A and Crétaux, Jean-François},
+  title    = {Lake storage variation on the endorheic Tibetan Plateau and its attribution to climate change since the new millennium},
+  journal  = {Environmental Research Letters},
+  year     = {2018},
+  volume   = {13},
+  number   = {6},
+  pages    = {064011},
+  doi      = {10.1088/1748-9326/aab5d3}
+}
+
+@article{liu2018litterfall,
+  author   = {Liu, Xianbin and Zeng, Xiucheng and Zou, Xiaoming and González, Grizelle and Wang, Chao and Yang, Si},
+  title    = {Litterfall Production Prior to and during Hurricanes Irma and Maria in Four Puerto Rican Forests},
+  journal  = {Forests},
+  year     = {2018},
+  volume   = {9},
+  number   = {6},
+  pages    = {367},
+  doi      = {10.3390/f9060367}
+}
+
 @article{wang2017puertorico,
-  author   = {Wang, C. and Yu, M. and Gao, Q.},
-  title    = {Continued reforestation and urban expansion in the new century of a tropical island in the Caribbean},
+  author   = {Wang, Chao and Yu, Mei and Gao, Qiong},
+  title    = {Continued Reforestation and Urban Expansion in the New Century of a Tropical Island in the Caribbean},
   journal  = {Remote Sensing},
   year     = {2017},
   volume   = {9},
@@ -121,12 +314,98 @@
   doi      = {10.3390/rs9070731}
 }
 
+@article{yu2017greenness,
+  author   = {Yu, Mei and Gao, Qiong and Gao, Chunxiao and Wang, Chao},
+  title    = {Extent of Night Warming and Spatially Heterogeneous Cloudiness Differentiate Temporal Trend of Greenness in Mountainous Tropics in the New Century},
+  journal  = {Scientific Reports},
+  year     = {2017},
+  volume   = {7},
+  number   = {1},
+  pages    = {41256},
+  doi      = {10.1038/srep41256}
+}
+
+@article{wang2017phenology,
+  author   = {Wang, Xian and Gao, Qiong and Wang, Chao and Yu, Mei},
+  title    = {Spatiotemporal patterns of vegetation phenology change and relationships with climate in the two transects of East China},
+  journal  = {Global Ecology and Conservation},
+  year     = {2017},
+  volume   = {10},
+  pages    = {206--219},
+  doi      = {10.1016/j.gecco.2017.01.010}
+}
+
+@article{yang2017alpine,
+  author   = {Yang, Kehan and Yao, Fangfang and Wang, Jida and Luo, Jiancheng and Shen, Zhanfeng and Wang, Chao and Song, Chunqiao},
+  title    = {Recent dynamics of alpine lakes on the endorheic Changtang Plateau from multi-mission satellite data},
+  journal  = {Journal of Hydrology},
+  year     = {2017},
+  volume   = {552},
+  pages    = {633--645},
+  doi      = {10.1016/j.jhydrol.2017.07.024}
+}
+
 @article{wang2016china,
-  author   = {Wang, C. and Gao, Q. and Wang, X. and Yu, M.},
+  author   = {Wang, Chao and Gao, Qiong and Wang, Xian and Yu, Mei},
   title    = {Spatially differentiated trends in urbanization, agricultural land abandonment and reclamation, and woodland recovery in Northern China},
   journal  = {Scientific Reports},
   year     = {2016},
   volume   = {6},
+  number   = {1},
   pages    = {37658},
   doi      = {10.1038/srep37658}
+}
+
+@article{wang2015abandonment,
+  author   = {Wang, Chao and Gao, Qiong and Wang, Xian and Yu, Mei},
+  title    = {Decadal Trend in Agricultural Abandonment and Woodland Expansion in an Agro-Pastoral Transition Band in Northern China},
+  journal  = {PLOS ONE},
+  year     = {2015},
+  volume   = {10},
+  number   = {11},
+  pages    = {e0142113},
+  doi      = {10.1371/journal.pone.0142113}
+}
+
+@article{yao2015water,
+  author   = {Yao, Fangfang and Wang, Chao and Dong, Di and Luo, Jiancheng and Shen, Zhanfeng and Yang, Kehan},
+  title    = {High-Resolution Mapping of Urban Surface Water Using ZY-3 Multi-Spectral Imagery},
+  journal  = {Remote Sensing},
+  year     = {2015},
+  volume   = {7},
+  number   = {9},
+  pages    = {12336--12355},
+  doi      = {10.3390/rs70912336}
+}
+
+@article{jing2015pm25,
+  author   = {Jing, R. and Ma, J. and Wang, C.},
+  title    = {Methods of PM2.5 inversion based on multi-source data},
+  journal  = {Journal of Atmospheric and Environmental Optics},
+  year     = {2015},
+  volume   = {10},
+  number   = {1},
+  pages    = {51--62},
+  note     = {In Chinese with English abstract}
+}
+
+@article{ma2014cloud,
+  author   = {Ma, Jinji and Wu, Hao and Wang, Chao and Zhang, Xin and Li, Zhengqiang and Wang, Xianhua},
+  title    = {Multiyear satellite and surface observations of cloud fraction over China},
+  journal  = {Journal of Geophysical Research: Atmospheres},
+  year     = {2014},
+  volume   = {119},
+  number   = {12},
+  pages    = {7655--7666},
+  doi      = {10.1002/2013jd021413}
+}
+
+@article{wang2013airquality,
+  author   = {Wang, Chao and Liu, Qiming and Ying, Na and Wang, Xianhua and Ma, Jinji},
+  title    = {Air quality evaluation on an urban scale based on MODIS satellite images},
+  journal  = {Atmospheric Research},
+  year     = {2013},
+  volume   = {132-133},
+  pages    = {22--34},
+  doi      = {10.1016/j.atmosres.2013.04.011}
 }

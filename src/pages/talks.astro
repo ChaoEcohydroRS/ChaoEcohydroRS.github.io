@@ -1,0 +1,71 @@
+---
+import { OWNER_GIVEN, OWNER_SURNAME } from '../consts';
+import cv from '../data/cv.json';
+import talks from '../data/talks.json';
+import Base from '../layouts/Base.astro';
+import { initials } from '../lib/bibtex';
+
+const me = `${OWNER_SURNAME}, ${initials(OWNER_GIVEN)}`;
+/** Split a citation around the owner's name so it can be set in bold. */
+const runs = (text: string) => text.split(me).flatMap((part, i) => (i === 0 ? [{ text: part, owner: false }] : [{ text: me, owner: true }, { text: part, owner: false }]));
+const first = talks.filter((t) => t.first);
+const coauthored = talks.filter((t) => !t.first);
+---
+
+<Base title="Talks" description="Invited talks and conference presentations by Chao Wang.">
+	<div class="wrap">
+		<header class="page-head">
+			<h1>Talks</h1>
+			<p class="lede">
+				{cv.talks.length} invited talks and {talks.length} conference presentations, {first.length} of them as first
+				author.
+			</p>
+		</header>
+
+		<section class="section" aria-labelledby="invited">
+			<div class="section__head"><h2 id="invited">Invited talks</h2></div>
+			<ul class="cv-list">
+				{
+					cv.talks.map((item) => (
+						<li>
+							<span class="when">{item.year}</span>
+							<div><p>{item.text}</p></div>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+
+		<section class="section" aria-labelledby="first-author">
+			<div class="section__head"><h2 id="first-author">Conference presentations as first author</h2></div>
+			<ul class="cv-list">
+				{
+					first.map((item) => (
+						<li>
+							<span class="when">{item.year}</span>
+							<div>
+								<p>{runs(item.text).map((run) => (run.owner ? <strong>{run.text}</strong> : run.text))}{item.oral && <span class="badge">Oral</span>}</p>
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+
+		<section class="section" aria-labelledby="coauthored">
+			<div class="section__head"><h2 id="coauthored">Co-authored conference presentations</h2></div>
+			<ul class="cv-list">
+				{
+					coauthored.map((item) => (
+						<li>
+							<span class="when">{item.year}</span>
+							<div>
+								<p>{runs(item.text).map((run) => (run.owner ? <strong>{run.text}</strong> : run.text))}{item.oral && <span class="badge">Oral</span>}</p>
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+	</div>
+</Base>

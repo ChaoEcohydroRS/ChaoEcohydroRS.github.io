@@ -19,7 +19,7 @@ const out = fileURLToPath(new URL('../.screenshots/', import.meta.url));
 const live = process.env.SITE_URL ? new URL(process.env.SITE_URL) : null;
 const base = (live ? live.pathname : process.env.BASE_PATH || '/').replace(/\/?$/, '/');
 const tag = live ? 'live' : base === '/' ? 'root' : base.replace(/\//g, '');
-const pages = ['', 'research/', 'research/forest-biomass-change/', 'research/pamlico-sound-water-levels/', 'publications/', 'teaching/', 'cv/'];
+const pages = ['', 'research/', 'research/forest-biomass-change/', 'research/pamlico-sound-water-levels/', 'publications/', 'talks/', 'teaching/', 'cv/'];
 const sizes = { desktop: { width: 1440, height: 900 }, phone: { width: 390, height: 844 } };
 
 await mkdir(out, { recursive: true });

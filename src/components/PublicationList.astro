@@ -1,30 +1,42 @@
 ---
-import { link, locator, type Publication } from '../lib/bibtex';
+import { authorRuns, link, locator, toBibTeX, type Publication } from '../lib/bibtex';
+import { url } from '../utils/paths';
 
 interface Props {
 	items: Publication[];
+	/** Show the year in a left column (off when the list sits under a year heading). */
+	showYear?: boolean;
+	/** Show a "Cite" box with the BibTeX entry. */
+	cite?: boolean;
+	/** Project id -> short name, to label papers that relate to a project page. */
+	projects?: Record<string, string>;
 }
-const { items } = Astro.props;
-
-/** Author list as text runs, so no stray spaces appear before commas. */
-const authorRuns = (p: Publication) =>
-	p.authors.map((a, i) => ({
-		text: `${a.last}, ${a.first}`,
-		owner: a.isOwner,
-		after: i < p.authors.length - 1 ? ', ' : p.etAl ? ', et al.' : '',
-	}));
+const { items, showYear = true, cite = false, projects = {} } = Astro.props;
 const venueTail = (p: Publication) => (locator(p) ? `, ${locator(p)}` : '') + (p.note ? ` · ${p.note}` : '');
 ---
 
-<ol class="pub-list">
+<ol class:list={['pub-list', { 'pub-list--plain': !showYear }]}>
 	{
 		items.map((p) => (
 			<li class="pub">
-				<span class="pub__year">{p.year}</span>
+				{showYear && <span class="pub__year">{p.year}</span>}
 				<div class="pub__body">
 					<p class="pub__title">{link(p) ? <a href={link(p)}>{p.title}</a> : p.title}</p>
-					<p class="pub__authors">{authorRuns(p).map((run) => (run.owner ? <><strong>{run.text}</strong>{run.after}</> : <>{run.text}{run.after}</>))}</p>
+					<p class="pub__authors">{authorRuns(p).map((run) => (run.owner ? <strong>{run.text}</strong> : run.text))}</p>
 					<p class="pub__venue"><em>{p.journal}</em>{venueTail(p)}</p>
+					{(cite || (p.project && projects[p.project])) && (
+						<div class="pub__meta">
+							{p.project && projects[p.project] && (
+								<a class="tag" href={url(`/research/${p.project}/`)}>{projects[p.project]}</a>
+							)}
+							{cite && (
+								<details class="cite">
+									<summary>Cite</summary>
+									<pre tabindex="0"><code>{toBibTeX(p)}</code></pre>
+								</details>
+							)}
+						</div>
+					)}
 				</div>
 			</li>
 		))
