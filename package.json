@@ -1,29 +1,30 @@
 {
-  "name": "astro-scholar",
+  "name": "chao-wang-site",
   "type": "module",
-  "version": "0.6.1",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "postbuild": "pagefind --site dist",
     "preview": "astro preview",
-    "astro": "astro"
+    "check": "astro check",
+    "stills": "node scripts/render-stills.mjs",
+    "check:site": "node scripts/check-site.mjs",
+    "check:links": "node scripts/check-external-links.mjs",
+    "screenshots": "node scripts/screenshots.mjs"
   },
   "dependencies": {
-    "@astrojs/mdx": "^6.0.3",
-    "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.3",
-    "@resvg/resvg-js": "^2.6.2",
+    "@fontsource-variable/source-sans-3": "^5.3.1",
+    "@fontsource/spectral": "^5.3.0",
     "astro": "^6.4.5",
-    "bibliography": "^0.1.0",
-    "rehype-katex": "^7.0.1",
-    "remark-math": "^6.0.0",
-    "satori": "^0.25.0",
-    "satori-html": "^0.3.2",
-    "sharp": "^0.34.3"
+    "sharp": "^0.34.3",
+    "three": "^0.187.0"
   },
   "devDependencies": {
-    "@pagefind/default-ui": "^1.5.0",
-    "pagefind": "^1.4.0"
+    "@astrojs/check": "^0.9.12",
+    "@types/three": "^0.187.0",
+    "playwright-core": "^1.65.1",
+    "typescript": "^5.9.0"
   }
 }

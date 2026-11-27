@@ -1,0 +1,96 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { url } from '../../utils/paths';
+
+export async function getStaticPaths() {
+	const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+	return projects.map((project, index) => ({
+		params: { slug: project.id },
+		props: { project, other: projects[(index + 1) % projects.length] },
+	}));
+}
+
+const { project, other } = Astro.props;
+const { data } = project;
+const { Content } = await render(project);
+---
+
+<Base title={data.short} description={data.summary}>
+	<article class="wrap">
+		<header class="page-head">
+			<p class="eyebrow"><a href={url('/research/')}>Research</a> · {data.short}</p>
+			<h1>{data.title}</h1>
+			<p class="lede">{data.summary}</p>
+		</header>
+
+		<dl class="facts">
+			<div>
+				<dt>Status</dt>
+				<dd>{data.status}</dd>
+			</div>
+			<div>
+				<dt>Study area</dt>
+				<dd>{data.region}</dd>
+			</div>
+			<div>
+				<dt>Data</dt>
+				<dd>
+					<ul>
+						{data.data.map((item) => <li>{item}</li>)}
+					</ul>
+				</dd>
+			</div>
+		</dl>
+
+		<div class="project-body">
+			{
+				data.figure && (
+					<figure class="project-figure">
+						<Image src={data.figure.src} alt={data.figure.alt} widths={[640, 1080, 1600]} sizes="(min-width: 900px) 54rem, 100vw" />
+						<figcaption>{data.figure.caption}</figcaption>
+					</figure>
+				)
+			}
+
+			<div class="prose">
+				<Content />
+
+				<h2>My contribution</h2>
+				<p>{data.contribution}</p>
+
+				<h2>Baseline</h2>
+				<p>{data.baseline}</p>
+
+				<h2>How the estimate is tested</h2>
+				<p>{data.test}</p>
+
+				<h2>What remains uncertain</h2>
+				<ul>
+					{data.uncertain.map((item) => <li>{item}</li>)}
+				</ul>
+
+				{
+					data.links.length > 0 && (
+						<>
+							<h2>Paper, code, and data</h2>
+							<ul class="link-list">
+								{data.links.map((l) => (
+									<li>
+										<a href={l.href}>{l.label}</a>
+									</li>
+								))}
+							</ul>
+						</>
+					)
+				}
+			</div>
+		</div>
+
+		<nav class="pager" aria-label="More research">
+			<a href={url('/research/')}>All research</a>
+			<a href={url(`/research/${other.id}/`)}>Next: {other.data.short}</a>
+		</nav>
+	</article>
+</Base>

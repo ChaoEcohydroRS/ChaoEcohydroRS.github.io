@@ -1,0 +1,18 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const page = await getEntry('pages', 'teaching');
+const { Content } = await render(page!);
+---
+
+<Base title={page!.data.title} description={page!.data.description}>
+	<div class="wrap">
+		<header class="page-head">
+			<h1>{page!.data.title}</h1>
+		</header>
+		<div class="section prose">
+			<Content />
+		</div>
+	</div>
+</Base>

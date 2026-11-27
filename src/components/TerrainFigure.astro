@@ -1,0 +1,88 @@
+---
+// The homepage figure. Without JavaScript the switch still swaps the two stills (CSS only);
+// the 3D model is loaded only when the visitor asks for it.
+import { url } from '../utils/paths';
+
+interface Props {
+	biomassHref: string;
+	waterHref: string;
+}
+const { biomassHref, waterHref } = Astro.props;
+const src = (view: string, width: number) => url(`/figure/${view}-${width}.webp`);
+const srcset = (view: string) => `${src(view, 800)} 800w, ${src(view, 1600)} 1600w`;
+const sizes = '(min-width: 1180px) 720px, (min-width: 900px) 62vw, 100vw';
+---
+
+<figure class="terrain" id="terrain-figure" data-view="observations">
+	<div class="terrain__frame">
+		<img
+			class="terrain__still terrain__still--obs"
+			src={src('observations', 1600)}
+			srcset={srcset('observations')}
+			sizes={sizes}
+			width="1600"
+			height="900"
+			fetchpriority="high"
+			decoding="async"
+			alt="Schematic 3D model of eastern North Carolina, seen at an angle from above. On the left, pine stands of different ages surround a rectangular harvest opening. A dark river winds through marsh into Pamlico Sound. On the right, a narrow barrier island separates the sound from the Atlantic. An amber lidar slice and white field-plot pins mark the forest. Two pale satellite swaths with a gap between them and dark gauge pins mark the sound."
+		/>
+		<img
+			class="terrain__still terrain__still--est"
+			src={src('estimates', 1600)}
+			srcset={srcset('estimates')}
+			sizes={sizes}
+			width="1600"
+			height="900"
+			loading="lazy"
+			decoding="async"
+			alt="The same model with estimates added. A grid of tiles over the forest shows biomass from low, in pale yellow, to high, in dark teal. Inside a dashed outline on the sound, contour lines show water level. The lidar slice, field plots, satellite swaths, and gauges remain faintly visible."
+		/>
+		<canvas
+			class="terrain__canvas"
+			hidden
+			tabindex="0"
+			aria-label="Interactive 3D model. Arrow keys rotate the model, Home resets the view, and the Observations and Estimates switch below changes the overlays."
+		></canvas>
+		<p class="terrain__tag">Schematic</p>
+	</div>
+
+	<div class="terrain__bar">
+		<fieldset class="switch">
+			<legend class="visually-hidden">Figure view</legend>
+			<label>
+				<input type="radio" name="terrain-view" value="observations" checked />
+				<span>Observations</span>
+			</label>
+			<label>
+				<input type="radio" name="terrain-view" value="estimates" />
+				<span>Estimates</span>
+			</label>
+		</fieldset>
+		<div class="terrain__actions">
+			<button type="button" class="button-quiet" data-terrain-3d hidden>View in 3D</button>
+			<button type="button" class="button-quiet" data-terrain-reset hidden>Reset view</button>
+		</div>
+	</div>
+
+	<figcaption class="terrain__caption">
+		<p class="terrain__text terrain__text--obs">
+			<strong>Observations.</strong> A lidar slice shows the canopy profile along one line, and field plots sample
+			a few stands. Over the sound, two SWOT swaths with a gap between them cover part of the water, and gauges
+			record the level at the shore.
+		</p>
+		<p class="terrain__text terrain__text--est">
+			<strong>Estimates.</strong> Models trained on those samples fill in the rest: forest biomass in every grid
+			cell, and water-level contours across a bounded part of the sound. The sampling footprints stay faintly
+			visible.
+		</p>
+		<p class="terrain__note">
+			Schematic of eastern North Carolina. It illustrates the approach and does not show measured data. Studies:
+			<a href={biomassHref}>Forest biomass</a> and <a href={waterHref}>Coastal water levels</a>.
+		</p>
+		<p class="terrain__status" role="status" aria-live="polite"></p>
+	</figcaption>
+</figure>
+
+<script>
+	import '../scripts/terrain/figure-client';
+</script>

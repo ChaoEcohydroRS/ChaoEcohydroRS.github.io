@@ -1,14 +1,7 @@
-import type { APIRoute } from "astro";
+import type { APIRoute } from 'astro';
 
-export const GET: APIRoute = ({ site, url }) => {
-    const robots = `
-User-agent: *
-Allow: /
-
-Sitemap: ${new URL(import.meta.env.BASE_URL + "sitemap-index.xml", site || url).href}
-  `.trim();
-
-    return new Response(robots, {
-        headers: { "Content-Type": "text/plain" },
-    });
+export const GET: APIRoute = ({ site }) => {
+	const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+	const sitemap = new URL(`${base}sitemap-index.xml`, site);
+	return new Response(`User-agent: *\nAllow: /\n\nSitemap: ${sitemap.href}\n`);
 };

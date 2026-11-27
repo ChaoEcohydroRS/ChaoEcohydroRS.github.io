@@ -1,0 +1,133 @@
+---
+import { CONTACT, CV_PDF, PROFILES, SITE } from '../consts';
+import cv from '../data/cv.json';
+import Base from '../layouts/Base.astro';
+import { cvPdfExists } from '../lib/cv';
+import { url } from '../utils/paths';
+---
+
+<Base title="Curriculum vitae" description="Curriculum vitae of Chao Wang: appointments, education, funding, datasets, talks, and service.">
+	<div class="wrap">
+		<header class="page-head">
+			<h1>Curriculum vitae</h1>
+			<p class="lede">
+				{SITE.role}, {SITE.department}, {SITE.institution}.
+				<a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+			</p>
+			{
+				cvPdfExists && (
+					<p style="margin-top: 1.1rem">
+						<a class="button" href={url(CV_PDF)} download>
+							Download CV (PDF)
+						</a>
+					</p>
+				)
+			}
+		</header>
+
+		<section class="section" aria-labelledby="appointments">
+			<div class="section__head"><h2 id="appointments">Appointments</h2></div>
+			<ul class="cv-list">
+				{
+					cv.appointments.map((item) => (
+						<li>
+							<span class="when">{item.years}</span>
+							<div>
+								<p><strong>{item.title}</strong></p>
+								<p class="sub">{item.org}</p>
+								{item.note && <p class="sub">{item.note}</p>}
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+
+		<section class="section" aria-labelledby="education">
+			<div class="section__head"><h2 id="education">Education</h2></div>
+			<ul class="cv-list">
+				{
+					cv.education.map((item) => (
+						<li>
+							<span class="when">{item.years}</span>
+							<div>
+								<p><strong>{item.title}</strong></p>
+								<p class="sub">{item.org}</p>
+								{item.note && <p class="sub">{item.note}</p>}
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+
+		<section class="section" aria-labelledby="funding">
+			<div class="section__head"><h2 id="funding">Research funding</h2></div>
+			<ul class="cv-list">
+				{
+					cv.funding.map((item) => (
+						<li>
+							<span class="when">{item.years}</span>
+							<div>
+								<p><strong>{item.title}</strong></p>
+								<p class="sub">
+									{item.sponsor} · {item.role} · PI: {item.pi}
+								</p>
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+
+		<section class="section" aria-labelledby="publications">
+			<div class="section__head">
+				<h2 id="publications">Publications</h2>
+				<a class="section__more" href={url('/publications/')}>Selected publications</a>
+			</div>
+			<p class="prose">
+				More than 30 peer-reviewed articles. Selected papers are on the
+				<a href={url('/publications/')}>Publications</a> page, and the full list is on
+				<a href={PROFILES[0].href}>{PROFILES[0].label}</a>.
+			</p>
+		</section>
+
+		<section class="section" aria-labelledby="datasets">
+			<div class="section__head"><h2 id="datasets">Published datasets and software</h2></div>
+			<ul class="cv-list">
+				{
+					cv.datasets.map((item) => (
+						<li>
+							<span class="when">{item.year}</span>
+							<div>
+								<p>{item.text}</p>
+								<p class="sub"><a href={`https://doi.org/${item.doi}`}>doi:{item.doi}</a></p>
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+
+		<section class="section" aria-labelledby="talks">
+			<div class="section__head"><h2 id="talks">Invited talks</h2></div>
+			<ul class="cv-list">
+				{
+					cv.talks.map((item) => (
+						<li>
+							<span class="when">{item.year}</span>
+							<div><p>{item.text}</p></div>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+
+		<section class="section" aria-labelledby="service">
+			<div class="section__head"><h2 id="service">Service</h2></div>
+			<ul class="prose">
+				{cv.service.map((item) => <li>{item}</li>)}
+			</ul>
+		</section>
+	</div>
+</Base>

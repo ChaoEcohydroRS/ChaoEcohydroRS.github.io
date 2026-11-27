@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Flood mapping with radar",
+    "text": "Repeat-pass L-band airborne radar (UAVSAR) mapped how flood extent changed during Hurricane Florence. Later work evaluates commercial Capella SAR for high-tide flooding with field validation.",
+    "links": [
+      { "label": "Paper (Water Resources Research, 2022)", "href": "https://doi.org/10.1029/2021WR030606" },
+      { "label": "Code", "href": "https://github.com/ChaoEcohydroRS/FlorenceFlood_UAVSAR_Repo" },
+      { "label": "Flood extent maps", "href": "https://doi.org/10.6084/m9.figshare.16910878.v5" }
+    ]
+  },
+  {
+    "title": "Ghost forests on the Atlantic coast",
+    "text": "A deep learning study with sub-meter aerial imagery mapped 11.9 million standing dead trees across 11 Atlantic-coast states and found extensive, previously undocumented ghost forests.",
+    "links": [
+      { "label": "Paper (Nature Sustainability, 2025)", "href": "https://doi.org/10.1038/s41893-025-01691-w" },
+      { "label": "Preprint on rising water and forest mortality (2026)", "href": "https://doi.org/10.64898/2026.09.21.753189" }
+    ]
+  },
+  {
+    "title": "Canopy height from GEDI, optical, and SAR data",
+    "text": "Interpretable machine learning fuses optical and SAR data with GEDI lidar samples to map canopy height in southeastern North Carolina.",
+    "links": [
+      { "label": "Paper (Remote Sensing, 2025)", "href": "https://doi.org/10.3390/rs17091536" },
+      { "label": "Data", "href": "https://doi.org/10.5281/zenodo.11176727" }
+    ]
+  },
+  {
+    "title": "Wetland vegetation from imaging spectroscopy, radar, and lidar",
+    "text": "In the Peace-Athabasca Delta, airborne imaging spectroscopy mapped plant communities with over 85 percent accuracy. UAV lidar and radar added vegetation structure and flooding.",
+    "links": [
+      { "label": "Paper (Remote Sensing of Environment, 2023)", "href": "https://doi.org/10.1016/j.rse.2023.113646" },
+      { "label": "Code", "href": "https://github.com/ChaoEcohydroRS/ABoVE_PAD_AVIRIS-NG" },
+      { "label": "Vegetation classification", "href": "https://doi.org/10.3334/ORNLDAAC/2069" }
+    ]
+  },
+  {
+    "title": "Coastal water clarity from ICESat-2",
+    "text": "With collaborators at Oregon State University, I work on estimating how quickly light fades with depth in coastal water (the diffuse attenuation coefficient, Kd) from ICESat-2 photon profiles.",
+    "links": [
+      { "label": "Paper (Remote Sensing of Environment, 2024)", "href": "https://doi.org/10.1016/j.rse.2024.114222" },
+      { "label": "Land-sea mask tool", "href": "https://doi.org/10.5281/zenodo.8432550" }
+    ]
+  }
+]

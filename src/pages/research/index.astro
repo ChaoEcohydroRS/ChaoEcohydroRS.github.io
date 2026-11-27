@@ -1,0 +1,83 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import lines from '../../data/research-lines.json';
+import Base from '../../layouts/Base.astro';
+import { url } from '../../utils/paths';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const future = await getEntry('pages', 'future');
+const { Content: Future } = await render(future!);
+---
+
+<Base
+	title="Research"
+	description="Research of Chao Wang: forest biomass change, coastal water levels, flood mapping, ghost forests, and wetland remote sensing."
+>
+	<div class="wrap">
+		<header class="page-head">
+			<h1>Research</h1>
+			<p class="lede">
+				I develop machine learning methods for satellite, airborne, and field data, and I test them on two
+				questions about eastern North Carolina: how forests change, and how water levels vary across coastal
+				bays.
+			</p>
+		</header>
+
+		<section class="section" aria-labelledby="projects">
+			<div class="section__head">
+				<h2 id="projects">Current projects</h2>
+			</div>
+			<ul class="cards">
+				{
+					projects.map((project) => (
+						<li>
+							<article class="card">
+								<p class="card__kicker">
+									{project.data.short} · {project.data.status}
+								</p>
+								<h3>{project.data.title}</h3>
+								<p>{project.data.summary}</p>
+								<p>
+									<a href={url(`/research/${project.id}/`)}>Read about this project</a>
+								</p>
+							</article>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+
+		<section class="section" aria-labelledby="lines">
+			<div class="section__head">
+				<h2 id="lines">Published work</h2>
+				<a class="section__more" href={url('/publications/')}>Publications</a>
+			</div>
+			<div class="two-col">
+				{
+					lines.map((line) => (
+						<article>
+							<h3>{line.title}</h3>
+							<p>{line.text}</p>
+							<ul class="link-list">
+								{line.links.map((l) => (
+									<li>
+										<a href={l.href}>{l.label}</a>
+									</li>
+								))}
+							</ul>
+						</article>
+					))
+				}
+			</div>
+		</section>
+
+		<section class="section" aria-labelledby="future">
+			<div class="section__head">
+				<h2 id="future">Future research</h2>
+			</div>
+			<div class="prose">
+				<Future />
+			</div>
+		</section>
+	</div>
+</Base>

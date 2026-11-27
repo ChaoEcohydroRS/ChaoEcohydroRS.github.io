@@ -1,0 +1,32 @@
+---
+// Dev-only harness (see astro.config.mjs). Renders one view of the terrain figure
+// at a fixed size so scripts/render-stills.mjs can capture it.
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Still harness</title>
+		<style>
+			html, body { margin: 0; background: #f4eee2; }
+			canvas { display: block; width: 1600px; height: 900px; }
+		</style>
+	</head>
+	<body>
+		<canvas id="still-canvas" width="1600" height="900"></canvas>
+		<script>
+			import { createTerrainFigure, type View } from '../src/scripts/terrain/scene';
+
+			const params = new URLSearchParams(location.search);
+			const view = (params.get('view') === 'estimates' ? 'estimates' : 'observations') as View;
+			const canvas = document.getElementById('still-canvas') as HTMLCanvasElement;
+			const figure = createTerrainFigure(canvas, { view, pixelRatio: 1, shadowMapSize: 4096, reducedMotion: true });
+			figure.render();
+			requestAnimationFrame(() => {
+				figure.render();
+				(window as unknown as { __stillReady: boolean }).__stillReady = true;
+			});
+		</script>
+	</body>
+</html>

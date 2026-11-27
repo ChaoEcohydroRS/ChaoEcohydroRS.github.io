@@ -1,0 +1,135 @@
+{
+  "appointments": [
+    {
+      "title": "Research Assistant Professor",
+      "org": "Department of Earth, Marine and Environmental Sciences, University of North Carolina at Chapel Hill",
+      "years": "2022–present"
+    },
+    {
+      "title": "Postdoctoral Research Scholar",
+      "org": "University of North Carolina at Chapel Hill",
+      "years": "2019–2022",
+      "note": "Advisor: Tamlin M. Pavelsky"
+    }
+  ],
+  "education": [
+    {
+      "title": "Ph.D., Department of Environmental Sciences",
+      "org": "University of Puerto Rico, San Juan",
+      "years": "2013–2019",
+      "note": "Dissertation: Land use/cover changes and their drivers using machine learning methods. Advisor: Qiong Gao"
+    },
+    {
+      "title": "M.Sc., Geographic Information Systems",
+      "org": "Anhui Normal University, China",
+      "years": "2012–2015",
+      "note": "Advisor: Jinji Ma"
+    },
+    {
+      "title": "B.Sc., Geographic Information Systems",
+      "org": "Anhui Normal University, China",
+      "years": "2008–2012"
+    }
+  ],
+  "funding": [
+    {
+      "title": "Linking Tree Mortality, Subsidence, Inundation, and Biomass Changes in Forested Wetlands",
+      "sponsor": "NASA (NISAR mission team)",
+      "role": "Co-Investigator",
+      "pi": "Tamlin Pavelsky (UNC)",
+      "years": "2026–2029"
+    },
+    {
+      "title": "It is flooding more than we know: climate injustice from floods due to sea level rise",
+      "sponsor": "NASA",
+      "role": "Co-Investigator",
+      "pi": "Katherine Anarde (NC State University)",
+      "years": "2024–2027"
+    },
+    {
+      "title": "Improving ICESat-2 data products applied to measurements of ocean particulates",
+      "sponsor": "NASA",
+      "role": "Institutional PI at UNC",
+      "pi": "Emily Eidam (Oregon State University)",
+      "years": "2024–2026"
+    },
+    {
+      "title": "THELORACS: Tree Health Evaluated using LiDAR, Optical, and Radar Applications across Coastal Systems",
+      "sponsor": "NASA",
+      "role": "Co-Investigator",
+      "pi": "Xi Yang (University of Virginia)",
+      "years": "2023–2025"
+    },
+    {
+      "title": "Evaluation of Capella SAR Data for mapping high-tide flooding inundation extent",
+      "sponsor": "NASA",
+      "role": "Co-Investigator",
+      "pi": "Tamlin Pavelsky (UNC)",
+      "years": "2023–2024"
+    }
+  ],
+  "datasets": [
+    {
+      "year": 2024,
+      "text": "Wang, C., Song, C., Schroeder, T. A., Woodcock, C. E., Pavelsky, T. M., Han, Q., & Yao, F. Leveraging GEDI and Multisource Remote Sensing for Enhanced Forest Canopy Height Estimation in Southeast North Carolina (v0.01). Zenodo.",
+      "doi": "10.5281/zenodo.11176727"
+    },
+    {
+      "year": 2023,
+      "text": "Wang, C., Eidam, E., Pavelsky, T. M., Bisson, K., & Walker, C. An Open-Source Tool for Updating ICESat-2 ATL03 Land-Sea Masks with High-Resolution Shoreline Datasets (v1.1.0). Zenodo.",
+      "doi": "10.5281/zenodo.8432550"
+    },
+    {
+      "year": 2022,
+      "text": "Wang, C., Pavelsky, T., Kyzivat, E., et al. ABoVE: Wetland vegetation classification for Peace-Athabasca Delta, Canada, 2019. ORNL DAAC.",
+      "doi": "10.3334/ORNLDAAC/2069"
+    },
+    {
+      "year": 2021,
+      "text": "Kyzivat, E., Smith, L. C., Huang, C., Wang, C., et al. ABoVE: UAVSAR lake and wetland classification for Yukon Flats, Peace-Athabasca Delta, and Canadian Shield, 2017–2019. ORNL DAAC.",
+      "doi": "10.3334/ORNLDAAC/1883"
+    },
+    {
+      "year": 2021,
+      "text": "Wang, C., Pavelsky, T., Yao, F., et al. Flood extent maps during Hurricane Florence derived from repeat-pass L-band UAVSAR images. figshare.",
+      "doi": "10.6084/m9.figshare.16910878.v5"
+    },
+    {
+      "year": 2018,
+      "text": "Yao, F., Wang, J., Yang, K., Wang, C., et al. High-resolution data set of annual lake areas and water storage across the Inner Tibet, 2002–2015. PANGAEA.",
+      "doi": "10.1594/PANGAEA.888706"
+    },
+    {
+      "year": 2016,
+      "text": "Wang, C., Yu, M., Gao, Q., & Wang, X. Puerto Rico Land Cover/Land Use Map in 2010. Harvard Dataverse.",
+      "doi": "10.7910/DVN/VS5JDP"
+    }
+  ],
+  "talks": [
+    {
+      "year": 2025,
+      "text": "As the Ocean Marches Inland: How Rising Seas Reshape Coastal Landscapes. Invited colloquium, University of North Carolina at Chapel Hill, October 3, 2025."
+    },
+    {
+      "year": 2025,
+      "text": "As the Ocean Marches Inland: How Rising Seas Reshape Coastal Landscapes. Invited seminar, Department of Environmental Sciences, University of Puerto Rico, September 4, 2025."
+    },
+    {
+      "year": 2022,
+      "text": "Integrating remote sensed data for improved resilience and response to rivers and coastal flood events. Invited seminar, Department of Environmental Sciences, University of Puerto Rico, September 1, 2022."
+    },
+    {
+      "year": 2019,
+      "text": "Solar farm monitoring and its land use impacts. Invited talk, Urban & Human Landscapes session, Google Geo for Good Summit, San Francisco, CA."
+    },
+    {
+      "year": 2017,
+      "text": "Remote sensing applications in phenology and land use and land cover dynamics. Brown-bag seminar, Kansas State University."
+    }
+  ],
+  "service": [
+    "Journal reviewer: Communications Earth & Environment, Remote Sensing of Environment, Geophysical Research Letters, Landscape Ecology, Environmental Research Letters, Scientific Reports, Remote Sensing, International Journal of Remote Sensing, Land, ISPRS International Journal of Geo-Information",
+    "Conference session organizer: ecohydrology sessions at AGU Fall Meetings",
+    "Memberships, current and previous: American Geophysical Union, IEEE Geoscience and Remote Sensing Society, Ecological Society of America, American Association of Geographers, Association for the Sciences of Limnology and Oceanography"
+  ]
+}
