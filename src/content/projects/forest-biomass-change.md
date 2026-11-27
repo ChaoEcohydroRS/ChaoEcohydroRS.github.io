@@ -8,10 +8,12 @@ summary: >-
   biomass map. I connect North Carolina's aerial canopy-height maps and satellite embeddings
   with remeasured Forest Inventory and Analysis plots to find out how small a gain can be measured.
 status: In progress
-region: North Carolina Coastal Plain
+presented:
+  - 2026 FIA Science Symposium (oral presentation)
+region: North Carolina, statewide
 data:
-  - Aerial canopy-height maps of North Carolina
-  - Annual satellite embeddings
+  - Canopy-height maps from NAIP aerial imagery
+  - AlphaEarth annual satellite embeddings
   - Remeasured USDA Forest Inventory and Analysis (FIA) plots
 contribution: >-
   I led the single-date biomass study that this project builds on. For the change study I am

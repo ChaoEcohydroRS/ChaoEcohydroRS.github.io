@@ -18,6 +18,8 @@ const projects = defineCollection({
 			status: z.string(),
 			region: z.string(),
 			data: z.array(z.string()),
+			/** Meetings where the work has been presented. */
+			presented: z.array(z.string()).default([]),
 			contribution: z.string(),
 			baseline: z.string(),
 			test: z.string(),

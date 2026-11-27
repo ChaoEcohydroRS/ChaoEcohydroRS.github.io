@@ -45,6 +45,18 @@ const related = publications.filter((p) => p.project === project.id);
 					</ul>
 				</dd>
 			</div>
+			{
+				data.presented.length > 0 && (
+					<div>
+						<dt>Presented at</dt>
+						<dd>
+							<ul>
+								{data.presented.map((item) => <li>{item}</li>)}
+							</ul>
+						</dd>
+					</div>
+				)
+			}
 		</dl>
 
 		<div class="project-body">
